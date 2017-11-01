@@ -1,5 +1,10 @@
 html {
     font-size: 20px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    background-color: #fdfdfd;
 }
 
 .container {
@@ -7,4 +12,26 @@ html {
     margin: 0 auto;
     margin-top: 5rem;
     margin-bottom: 5rem;
+}
+
+.container h1 {
+    font-size: 3rem;
+}
+
+.container h2 {
+    margin-top: 3rem;
+    font-size: 2rem;
+}
+
+.container li {
+    margin-bottom: 0.5rem;
+}
+
+.container a {
+    text-decoration: none;
+    color: #0373af; 
+}
+
+.container a:hover {
+    text-decoration: underline;
 }
