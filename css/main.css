@@ -1,6 +1,7 @@
 html {
     font-size: 20px;
     font-family: 'Open Sans', sans-serif;
+    color: #2c2c2c;
 }
 
 body {
@@ -34,4 +35,24 @@ body {
 
 .container a:hover {
     text-decoration: underline;
+}
+
+.langform {
+    float: right;
+}
+
+.langbtn {
+    background-color: rgba(0, 0, 0, 0.03);
+    font-size: 0.8rem;
+    font-weight: bold; 
+    padding: 0.4rem 0.8rem;
+    vertical-align: middle;
+    cursor: pointer;
+    border: none;
+    border-radius: 0.1rem;
+    user-select: none;
+}
+
+.langbtn:hover {
+    box-shadow: 0 2px 1px rgba(0, 0, 0, .1);
 }
