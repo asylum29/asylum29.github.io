@@ -37,7 +37,7 @@ body {
     text-decoration: underline;
 }
 
-.langform {
+.langdiv {
     float: right;
 }
 
@@ -51,6 +51,7 @@ body {
     border: none;
     border-radius: 0.1rem;
     user-select: none;
+    outline: none;
 }
 
 .langbtn:hover {
