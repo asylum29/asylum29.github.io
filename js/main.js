@@ -1,6 +1,6 @@
 $(document).ready(function() {
     $.ajax({
-        dataType: "json",
+        dataType: 'json',
         url: 'lang.json',
         success: function(data) {
             var lang = 'en';

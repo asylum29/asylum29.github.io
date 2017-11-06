@@ -9,6 +9,15 @@
 
 # Build settings
 markdown: kramdown
+exclude: [README.md, Gemfile, Gemfile.lock]
+saas:
+  style: compressed
+compress_html:
+  clippings: all
+  comments: all
+  endings: all
+  profile: true
+  startings: [head, body]
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
