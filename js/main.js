@@ -5,6 +5,7 @@ $(document).ready(function() {
         success: function(data) {
             var lang = 'en';
             setLang(data, lang);
+            $('.container').show();
             $('.langbtn').on('click', function(e) {
                 e.preventDefault();
                 $(this).text(lang.toUpperCase());
