@@ -82,83 +82,82 @@
     },
     "en": {
         "title": [
-            "Александр Раецкий - веб-разработчик"
+            "Aleksandr Raetskiy - Web developer"
         ],
         "name": [
-            "Александр Раецкий"
+            "Aleksandr Raetskiy"
         ],
         "about_header": [
-            "Обо мне"
+            "About me"
         ],
         "about_text": [
-            "Родился 29 февраля 1992 года в городе Новокузнецке. Занимаюсь разработкой",
-            "бэкенда (преимущественно на PHP) и скриптами фронтенда. Не люблю работать с версткой."
+            "I was born on 29 February of 1992 in the city of Novokuznetsk. I am a backend developer (mostly with PHP).",
+            "Also I work with frontend scripts. Don't like to work with layout."
         ],
         "experience_header": [
-            "Опыт работы"
+            "Experience"
         ],
         "experience_text": [
-            "С 2015 года осуществляю поддержку сайта системы управления обучением <a href=\"https://moodle.org\">Moodle</a>",
-            "Сибирского государственного индустриального университета (<a href=\"http://sibsiu.ru\">СибГИУ</a>).",
-            "Занимаюсь разработкой дополнительных модулей (плагинов) к данной системе с применением API Moodle. Одна из разработок заинтересовала вузы,",
-            "в результате чего было создано коммерческое предложение, а сам плагин был успешно продан.",
-            "Также участвовал в создании сайта музея истории СибГИУ."
+            "I am an administrator and developer of learning management system <a href=\"https://moodle.org\">Moodle</a>",
+            "of Siberian State Industrial University (<a href=\"http://sibsiu.ru\">SibSIU</a>) since 2015.",
+            "One of my plugins has interested other universities and was successfully sold.",
+            "Also I took part in developing the site of SibSIU history museum."
         ],
         "projects_header": [
-            "Список разработок"
+            "Projects portfolio"
         ],
         "projects_list": [
             {
                 "name": [
-                    "<a href=\"http://e-notabene.ru/kp/article_18016.html\">Информационная система «Портфолио СибГИУ»</a> (PHP, jQuery, Twig)"
+                    "<a href=\"http://e-notabene.ru/kp/article_18016.html\">Information system «Portfolio SibSIU»</a> (PHP, jQuery, Twig)"
                 ],
                 "description": [
-                    "Модуль типа блок к системе Moodle. Позволяет формировать электронное портфолио обучающегося в соответствии с Российскими стандартами образования"
+                    "A «block» type plugin for the system Moodle. It allows students to form electronic portfolio in accordance with Russian education standards"
                 ]
             },
             {
                 "name": [
-                    "<a href=\"https://github.com/asylum29/block_sibcms\">Система мониторинга электронных курсов</a> (PHP, jQuery)"
+                    "<a href=\"https://github.com/asylum29/block_sibcms\">Electronic courses monitoring system</a> (PHP, jQuery)"
                 ],
                 "description": [
-                    "Модуль типа блок к системе Moodle. Позволяет формировать отчетности по электронным курсам: замечания по наполнению курсов, количественные показатели.",
-                    "Является продолжением двух других разработок: модули отчетов <a href=\"https://github.com/asylum29/report_monitoring\">«Мониторинг курсов»</a>",
-                    "и <a href=\"https://github.com/asylum29/report_activity\">«Работа в курсе»</a> к системе Moodle"
+                    "A «block» type plugin for the system Moodle. It allows forming reports about electronic courses: courses content errors, activity statistic.",
+                    "This projects is based on two other plugins: <a href=\"https://github.com/asylum29/report_monitoring\">«Course monitoring»</a>",
+                    "and <a href=\"https://github.com/asylum29/report_activity\">«Course activity»</a>"
                 ]
             },
             {
                 "name": [
-                    "<a href=\"https://github.com/asylum29/block_course_manager\">Блок «Управление курсами»</a> (PHP)"
+                    "<a href=\"https://github.com/asylum29/block_course_manager\">Block «Course management»</a> (PHP)"
                 ],
                 "description": [
-                    "Модуль типа блок к системе Moodle. Позволяет систематизировать электронные курсы по произвольно создаваемым категориям"
+                    "A «block» type plugin for the system Moodle. It allows grouping electronic courses in custom categories"
                 ]
             },
             {
                 "name": [
-                    "<a href=\"https://github.com/asylum29/assignfeedback_doc\">Модуль «Отзыв в виде документа»</a> (PHP)"
+                    "<a href=\"https://github.com/asylum29/assignfeedback_doc\">Module «Document report»</a> (PHP)"
                 ],
                 "description": [
-                    "Модуль отправки отзыва к системе Moodle. Формирует отзыв преподавателя на работу обучающегося с автоматическим заполнением полей формы документа"
+                    "Assign feedback module for the system Moodle. It creates teacher’s reports for student works, automatically filling document form fields"
                 ]
             },
             {
                 "name": [
-                    "<a href=\"https://github.com/asylum29/MuseumProject\">Веб-сайт «Музей истории СибГИУ»</a> (SQLite, PHP, jQuery, Twig)"
+                    "<a href=\"https://github.com/asylum29/MuseumProject\">Web-site «Museum of the history of SibSIU»</a> (SQLite, PHP, jQuery, Twig)"
                 ],
                 "description": [
-                    "Веб-сайт <a href=\"http://dep.sibsiu.ru/museum\">музея истории СибГИУ</a>,",
-                    "предоставляющий посетителям различные сведения об экспонатах музея, руководителях университета и другом"
+                    "<a href=\"http://dep.sibsiu.ru/museum\">Web site of SIbSIU history museum</a>,",
+                    "presenting users various information about museum exhibits, university leaders, etc"
                 ]
             }
         ],
         "extra_header": [
-            "Дополнительно"
+            "Other"
         ],
         "extra_text": [
-            "Могу работать с GIT.<br />",
-            "Знаком с MVC, REST, CORS, JSONP и многим другим.<br />",
-            "Люблю спокойствие и тишину."
+            "I can work with GIT,<br />",
+            "know MVC, REST, CORS, JSONP and much more.<br />",
+            "Like quiet and silence."
         ]
     }
 }
