@@ -63,6 +63,14 @@
             },
             {
                 "name": [
+                    "<a href=\"https://github.com/asylum29/local_group_messages\">Модуль «Групповая рассылка сообщений»</a> (PHP)"
+                ],
+                "description": [
+                    "Модуль групповой рассылки сообщений к системе Moodle. Позволяет отправлять сообщения группам пользователей"
+                ]
+            },
+            {
+                "name": [
                     "<a href=\"https://github.com/asylum29/MuseumProject\">Веб-сайт «Музей истории СибГИУ»</a> (SQLite, PHP, jQuery, Twig)"
                 ],
                 "description": [
@@ -139,6 +147,14 @@
                 ],
                 "description": [
                     "Assign feedback module for the system Moodle. It creates teacher’s reports for student works, automatically filling document form fields"
+                ]
+            },
+            {
+                "name": [
+                    "<a href=\"https://github.com/asylum29/local_group_messages\">Module «Group message sending»</a> (PHP)"
+                ],
+                "description": [
+                    "Group message sending module for Moodle system. Allows to send messages to user groups."
                 ]
             },
             {
