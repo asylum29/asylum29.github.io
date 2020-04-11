@@ -3,20 +3,21 @@ $(document).ready(function() {
         dataType: 'json',
         url: 'lang.json',
         success: function(data) {
-            var lang = 'en';
+            let lang_button = $('.langbtn');
+            let lang = 'RU' === lang_button.text() ? 'en' : 'ru';
             setLang(data, lang);
             $('.container').show();
-            $('.langbtn').on('click', function(e) {
+            lang_button.on('click', function(e) {
                 e.preventDefault();
                 $(this).text(lang.toUpperCase());
-                lang = lang == 'en' ? 'ru' : 'en';
+                lang = 'ru' === lang ? 'en' : 'ru';
                 setLang(data, lang);
             });
         }
     });
 
     function setLang(data, lang) {
-        var str = data[lang];
+        let str = data[lang];
         $('title').text(str.title.join(' '));
         $('.name span').html(str.name.join(' '));
         $('.about').html(str.about_header.join(' '));
@@ -24,11 +25,11 @@ $(document).ready(function() {
         $('.experience').html(str.experience_header.join(' '));
         $('.experience + div').html(str.experience_text.join(' '));
         $('.projects').html(str.projects_header.join(' '));
-        var projects_list = $('.projects + div');
+        let projects_list = $('.projects + div');
         projects_list.empty();
-        for (var i = 0; i < str.projects_list.length; i++) {
-            var temp = str.projects_list[i].name.join(' ') + '<br />' + str.projects_list[i].description.join(' ');
-            projects_list.append('<li>' + temp + '</li>');
+        for (let i = 0; i < str.projects_list.length; i++) {
+            let temp = `${str.projects_list[i].name.join(' ')}<br />${str.projects_list[i].description.join(' ')}`;
+            projects_list.append(`<li>${temp}</li>`);
         }
         projects_list.children('li').wrapAll('<ul />');
         $('.extra').html(str.extra_header.join(' '));
