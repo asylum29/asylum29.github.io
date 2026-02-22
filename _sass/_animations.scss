@@ -1,0 +1,214 @@
+// ============================================
+// Animations
+// ============================================
+
+// Keyframes
+// ---------
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes scaleIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes pulse {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+}
+
+@keyframes shimmer {
+    0% {
+        background-position: -200% 0;
+    }
+    100% {
+        background-position: 200% 0;
+    }
+}
+
+// Animation Classes
+// -----------------
+
+.animate-fade-in {
+    animation: fadeIn 0.5s ease forwards;
+}
+
+.animate-fade-in-up {
+    animation: fadeInUp 0.6s ease forwards;
+}
+
+.animate-fade-in-down {
+    animation: fadeInDown 0.6s ease forwards;
+}
+
+.animate-slide-in-left {
+    animation: slideInLeft 0.5s ease forwards;
+}
+
+.animate-slide-in-right {
+    animation: slideInRight 0.5s ease forwards;
+}
+
+.animate-scale-in {
+    animation: scaleIn 0.4s ease forwards;
+}
+
+// Staggered Animation Delays
+// ---------------------------
+
+.delay-1 { animation-delay: 0.1s; }
+.delay-2 { animation-delay: 0.2s; }
+.delay-3 { animation-delay: 0.3s; }
+.delay-4 { animation-delay: 0.4s; }
+.delay-5 { animation-delay: 0.5s; }
+.delay-6 { animation-delay: 0.6s; }
+.delay-7 { animation-delay: 0.7s; }
+.delay-8 { animation-delay: 0.8s; }
+.delay-9 { animation-delay: 0.9s; }
+.delay-10 { animation-delay: 1.0s; }
+
+// Reduced Motion
+// --------------
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+    
+    .section {
+        opacity: 1;
+        transform: none;
+    }
+    
+    .container {
+        opacity: 1;
+    }
+}
+
+// Hover Transitions
+// -----------------
+
+.hover-lift {
+    transition: transform $transition-base, box-shadow $transition-base;
+    
+    &:hover {
+        transform: translateY(-2px);
+    }
+}
+
+.hover-scale {
+    transition: transform $transition-fast;
+    
+    &:hover {
+        transform: scale(1.02);
+    }
+}
+
+.hover-glow {
+    transition: box-shadow $transition-base;
+    
+    &:hover {
+        box-shadow: 0 0 20px rgba(37, 99, 235, 0.3);
+    }
+}
+
+// Loading States
+// --------------
+
+.skeleton {
+    background: linear-gradient(
+        90deg,
+        $color-border-light 25%,
+        $color-surface 50%,
+        $color-border-light 75%
+    );
+    background-size: 200% 100%;
+    animation: shimmer 1.5s infinite;
+    border-radius: $radius-base;
+}
+
+.skeleton--text {
+    height: 1em;
+    margin-bottom: $spacing-2;
+    
+    &:last-child {
+        width: 70%;
+    }
+}
+
+.skeleton--title {
+    height: 2em;
+    width: 50%;
+    margin-bottom: $spacing-4;
+}
+
+.skeleton--avatar {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+}

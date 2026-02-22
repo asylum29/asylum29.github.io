@@ -3,19 +3,16 @@ layout: compress
 ---
 
 <!DOCTYPE html>
-<html>
-
+<html lang="ru">
 <head>
     <title></title>
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="{{ '/favicon.ico' | relative_url }}" type="image/x-icon">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     {% include head.html %}
 </head>
-
 <body>
-    <div class="container">
+    <main class="container">
     {{ content }}
-    </div>
+    </main>
 </body>
-
 </html>

@@ -2,38 +2,130 @@
 layout: default
 ---
 
-<h1 class="name">
-    <span></span>
-    <div class="langdiv">
-        <button class="langbtn" style="display: none;">EN</button>
+<header class="header">
+    <div class="header__info">
+        <h1 class="header__name" data-i18n="personal.name"></h1>
+        <p class="header__position" data-i18n="personal.position"></p>
     </div>
-</h1>
-<div>
-    <svg fill="#acacac" aria-hidden="true" height="18" version="1.1" viewBox="0 0 16 16" width="18">
-        <path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 
-        7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 
-        1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 
-        0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 
-        3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z">
-        </path>
-    </svg>
-    <a href="https://github.com/asylum29">GitHub</a> / 
-    <svg fill="#acacac" aria-hidden="true" height="18" version="1.1" viewBox="0 0 16 16" width="18">
-        <path fill-rule="evenodd" d="M0 4v8c0 .55.45 1 1 1h12c.55 0 1-.45 1-1V4c0-.55-.45-1-1-1H1c-.55 
-        0-1 .45-1 1zm13 0L7 9 1 4h12zM1 5.5l4 3-4 3v-6zM2 12l3.5-3L7 10.5 8.5 9l3.5 3H2zm11-.5l-4-3 4-3v6z">
-        </path>
-    </svg>
-    <a href="mailto:ksenon3@mail.ru">Email</a>
-</div>
+    <div class="lang-switcher">
+        <button class="lang-btn active" data-lang="ru">RU</button>
+        <button class="lang-btn" data-lang="en">EN</button>
+    </div>
+</header>
 
-<h2 class="about"></h2>
-<div></div>
+<nav class="contacts" aria-label="Контакты">
+    <div class="contact-item">
+        <svg class="contact-item__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+        </svg>
+        <a href="tel:+79511751999" data-i18n="contacts.phone"></a>
+    </div>
+    <div class="contact-item">
+        <svg class="contact-item__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+            <polyline points="22,6 12,13 2,6"></polyline>
+        </svg>
+        <a href="mailto:ksenon3@mail.ru" data-i18n="contacts.email"></a>
+    </div>
+    <div class="contact-item">
+        <svg class="contact-item__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+        </svg>
+        <a href="https://github.com/asylum29" target="_blank" rel="noopener">GitHub</a>
+    </div>
+    <div class="contact-item">
+        <svg class="contact-item__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+        </svg>
+        <a href="https://t.me/worldzeron" target="_blank" rel="noopener">Telegram</a>
+    </div>
+    <div class="contact-item">
+        <svg class="contact-item__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+            <circle cx="12" cy="10" r="3"></circle>
+        </svg>
+        <span data-i18n="personal.location"></span>
+    </div>
+</nav>
 
-<h2 class="experience"></h2>
-<div></div>
+<section class="section" aria-labelledby="about-title">
+    <header class="section__header">
+        <svg class="section__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+            <circle cx="12" cy="7" r="4"></circle>
+        </svg>
+        <h2 class="section__title" id="about-title" data-i18n="about.header"></h2>
+    </header>
+    <div class="about__text" data-i18n-html="about.text"></div>
+</section>
 
-<h2 class="projects"></h2>
-<div></div>
+<section class="section section--ai" aria-labelledby="ai-title">
+    <header class="section__header">
+        <svg class="section__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 3l1.912 5.813a2 2 0 0 0 1.275 1.275L21 12l-5.813 1.912a2 2 0 0 0-1.275 1.275L12 21l-1.912-5.813a2 2 0 0 0-1.275-1.275L3 12l5.813-1.912a2 2 0 0 0 1.275-1.275L12 3z"></path>
+            <path d="M5 3v4"></path>
+            <path d="M3 5h4"></path>
+            <path d="M19 17v4"></path>
+            <path d="M17 19h4"></path>
+        </svg>
+        <h2 class="section__title" id="ai-title" data-i18n="ai.header"></h2>
+    </header>
+    <div class="ai__tools" data-i18n-html="ai.tools"></div>
+    <ul class="ai__description" data-i18n-list="ai.description"></ul>
+</section>
 
-<h2 class="extra"></h2>
-<div></div>
+<section class="section" aria-labelledby="experience-title">
+    <header class="section__header">
+        <svg class="section__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+            <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+        </svg>
+        <h2 class="section__title" id="experience-title" data-i18n="experience.header"></h2>
+    </header>
+    <div class="experience-list" id="experience-list"></div>
+</section>
+
+<section class="section" aria-labelledby="skills-title">
+    <header class="section__header">
+        <svg class="section__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="16 18 22 12 16 6"></polyline>
+            <polyline points="8 6 2 12 8 18"></polyline>
+        </svg>
+        <h2 class="section__title" id="skills-title" data-i18n="skills.header"></h2>
+    </header>
+    <div class="skills-grid" id="skills-grid"></div>
+</section>
+
+<section class="section" aria-labelledby="education-title">
+    <header class="section__header">
+        <svg class="section__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+            <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+        </svg>
+        <h2 class="section__title" id="education-title" data-i18n="education.header"></h2>
+    </header>
+    <div class="education-card">
+        <div class="education-card__year" data-i18n="education.year"></div>
+        <div class="education-card__content">
+            <h3 class="education-card__degree" data-i18n="education.degree"></h3>
+            <p class="education-card__university" data-i18n="education.university"></p>
+            <p class="education-card__faculty" data-i18n="education.faculty"></p>
+        </div>
+    </div>
+</section>
+
+<section class="section" aria-labelledby="languages-title">
+    <header class="section__header">
+        <svg class="section__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"></circle>
+            <line x1="2" y1="12" x2="22" y2="12"></line>
+            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+        </svg>
+        <h2 class="section__title" id="languages-title" data-i18n="languages.header"></h2>
+    </header>
+    <div class="languages-list" id="languages-list"></div>
+</section>
+
+<footer class="footer">
+    <p>© <span id="current-year"></span> Александр Раецкий</p>
+</footer>

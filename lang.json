@@ -1,185 +1,246 @@
 {
     "ru": {
-        "title": [
-            "Александр Раецкий - веб-разработчик"
-        ],
-        "name": [
-            "Александр Раецкий"
-        ],
-        "about_header": [
-            "Обо мне"
-        ],
-        "about_text": [
-            "Родился 29 февраля 1992 года в городе Новокузнецке. Занимаюсь разработкой бэкенда (преимущественно на PHP)."
-        ],
-        "experience_header": [
-            "Опыт работы"
-        ],
-        "experience_text": [
-            "С 2015 года по 2018 год осуществлял доработку и поддержку сайта системы <a href=\"https://moodle.org\">Moodle</a>",
-            "Сибирского государственного индустриального университета (<a href=\"http://sibsiu.ru\">СибГИУ</a>).",
-            "С 2019 года по 2022 год работал в должности программиста в <a href=\"https://mycentra.ru\">CENTRA</a>,",
-            "занимаясь разработкой и поддержкой различных внутренних сервисов компании, а также созданием нового корпоративного портала."
-        ],
-        "projects_header": [
-            "Список разработок"
-        ],
-        "projects_list": [
-            {
-                "name": [
-                    "<a href=\"http://e-notabene.ru/kp/article_18016.html\">Информационная система «Портфолио СибГИУ»</a> (PHP, jQuery, Twig)"
-                ],
-                "description": [
-                    "Модуль типа блок к системе Moodle. Позволяет формировать электронное портфолио обучающегося в соответствии с Российскими стандартами образования.",
-                    "Разработка заинтересовала вузы, в результате чего было создано коммерческое предложение, а сам плагин был успешно продан"
-                ]
+        "title": "Александр Раецкий — Senior Backend-разработчик",
+        "personal": {
+            "name": "Александр Раецкий",
+            "position": "Senior Backend-разработчик",
+            "location": "Новокузнецк, Россия"
+        },
+        "contacts": {
+            "phone": "+7 (951) 175-19-99",
+            "email": "ksenon3@mail.ru",
+            "github": "asylum29",
+            "telegram": "worldzeron"
+        },
+        "about": {
+            "header": "Обо мне",
+            "text": [
+                "Backend-разработчик с более чем 10-летним опытом. Специализируюсь на PHP (Laravel, Symfony), также работаю с Go и C#.",
+                "Управляю командой разработки, занимаюсь наставничеством и системным анализом. Активно внедряю ИИ-инструменты в процессы разработки."
+            ]
+        },
+        "ai": {
+            "header": "ИИ-компетенции",
+            "tools": "GLM-5, OPUS 4.6",
+            "description": [
+                "Активно использую ИИ в работе — полностью меняю подход к созданию ПО.",
+                "Управляю ИИ-командой, формирую подходы к созданию «А-команды».",
+                "Внедряю ИИ-инструменты в компании для обслуживания различных запросов на создание и поддержку ПО."
+            ]
+        },
+        "experience": {
+            "header": "Опыт работы",
+            "items": [
+                {
+                    "company": "Красцветмет ИТ",
+                    "url": "https://kit-digital.ru",
+                    "position": "Старший разработчик",
+                    "period": "Октябрь 2022 — настоящее время",
+                    "duration": "3 года 5 месяцев",
+                    "description": [
+                        "Создание проекта «Целеполагание / Комитеты развития» (Laravel). Разработка MVP, построение архитектуры.",
+                        "Управление командой разработки на backend. Декомпозиция задач, наставничество.",
+                        "Развитие «Оптового ювелирного портала»: переработка каталога, системы уведомлений, маркетинговые инструменты.",
+                        "Разработка оптимизирующего планировщика производства на C#."
+                    ]
+                },
+                {
+                    "company": "Красцветмет",
+                    "url": "https://krastsvetmet.ru",
+                    "position": "Разработчик",
+                    "period": "Май 2022 — Октябрь 2022",
+                    "duration": "6 месяцев",
+                    "description": [
+                        "Продуктовая backend-разработка ювелирного портала для B2B-сегмента на базе Laravel."
+                    ]
+                },
+                {
+                    "company": "CENTRA",
+                    "url": "https://mycentra.ru",
+                    "position": "Программист 1 категории",
+                    "period": "Май 2019 — Апрель 2022",
+                    "duration": "3 года",
+                    "description": [
+                        "Разработка и внедрение ERP-системы на Symfony4: call-центр, работа с договорами, отчетность, интеграции.",
+                        "Создание сервисов на Go для интеграции с РосДомофон.",
+                        "Поддержка систем на Bitrix, Yii2, Vue.js, Java."
+                    ]
+                },
+                {
+                    "company": "Сибирский государственный индустриальный университет",
+                    "url": "https://sibsiu.ru",
+                    "position": "Заведующий сектором",
+                    "period": "Сентябрь 2017 — Ноябрь 2018",
+                    "duration": "1 год 3 месяца",
+                    "description": [
+                        "Администрирование и доработка системы управления обучением Moodle.",
+                        "Разработка плагинов, успешно проданных другим образовательным организациям."
+                    ]
+                },
+                {
+                    "company": "Сибирский государственный индустриальный университет",
+                    "url": "https://sibsiu.ru",
+                    "position": "Ведущий инженер-программист",
+                    "period": "Сентябрь 2015 — Сентябрь 2017",
+                    "duration": "2 года 1 месяц",
+                    "description": [
+                        "Администрирование и поддержка пользователей системы Moodle.",
+                        "Доработка функционала под требования университета."
+                    ]
+                }
+            ]
+        },
+        "skills": {
+            "header": "Навыки",
+            "technical": {
+                "header": "Технические",
+                "items": ["PHP", "Laravel", "Symfony", "Go", "C#", "JavaScript", "SQL", "Docker", "Redis", "RabbitMQ"]
             },
-            {
-                "name": [
-                    "<a href=\"https://github.com/asylum29/block_sibcms\">Система мониторинга электронных курсов</a> (PHP, jQuery)"
-                ],
-                "description": [
-                    "Модуль типа блок к системе Moodle. Позволяет формировать отчетности по электронным курсам: замечания по наполнению курсов, количественные показатели.",
-                    "Является продолжением двух других разработок: модули отчетов <a href=\"https://github.com/asylum29/report_monitoring\">«Мониторинг курсов»</a>",
-                    "и <a href=\"https://github.com/asylum29/report_activity\">«Работа в курсе»</a> к системе Moodle"
-                ]
+            "architecture": {
+                "header": "Архитектура",
+                "items": ["REST", "SOAP", "SOLID", "KISS", "DRY", "MVC"]
             },
-            {
-                "name": [
-                    "<a href=\"https://github.com/asylum29/block_course_manager\">Блок «Управление курсами»</a> (PHP)"
-                ],
-                "description": [
-                    "Модуль типа блок к системе Moodle. Позволяет систематизировать электронные курсы по произвольно создаваемым категориям"
-                ]
-            },
-            {
-                "name": [
-                    "<a href=\"https://github.com/asylum29/assignfeedback_doc\">Модуль «Отзыв в виде документа»</a> (PHP)"
-                ],
-                "description": [
-                    "Модуль отправки отзыва к системе Moodle. Формирует отзыв преподавателя на работу обучающегося с автоматическим заполнением полей формы документа"
-                ]
-            },
-            {
-                "name": [
-                    "<a href=\"https://github.com/asylum29/local_group_messages\">Модуль «Групповая рассылка сообщений»</a> (PHP)"
-                ],
-                "description": [
-                    "Модуль групповой рассылки сообщений к системе Moodle. Позволяет отправлять сообщения группам пользователей"
-                ]
-            },
-            {
-                "name": [
-                    "<a href=\"https://github.com/asylum29/MuseumProject\">Веб-сайт «Музей истории СибГИУ»</a> (SQLite, PHP, jQuery, Twig)"
-                ],
-                "description": [
-                    "Веб-сайт <a href=\"http://dep.sibsiu.ru/museum\">музея истории СибГИУ</a>,",
-                    "предоставляющий посетителям различные сведения об экспонатах музея, руководителях университета и другом"
-                ]
-            },
-            {
-                "name": [
-                    "<b>ERP-система компании CENTRA</b> (Symfony4, Redis, Centrifugo)"
-                ],
-                "description": [
-                    "Комплексное программное обеспечение компании, предназначенное для автоматизации бизнес-процессов.",
-                    "Также предоставляет различную отчетность (в виде таблиц, графиков, карт 2GIS); sms- и email-рассылки с оповещениями абонентов;",
-                    "взаимодействие с Telegram; формирование документов (.pdf, .doc) на базе шаблонов; интеграции с внешними сервисами и другое"
-                ]
+            "soft": {
+                "header": "Управление",
+                "items": ["Управление командой", "Наставничество", "Системный анализ", "Декомпозиция задач", "Kanban", "Scrum"]
             }
-        ],
-        "extra_header": [
-            "Дополнительно"
-        ],
-        "extra_text": [
-            "Внимательный, ответственный<br />"
-        ]
+        },
+        "education": {
+            "header": "Образование",
+            "degree": "Магистр",
+            "university": "Сибирский государственный индустриальный университет",
+            "faculty": "Институт информационных технологий и автоматизированных систем",
+            "specialty": "Информационные системы и технологии",
+            "year": "2018"
+        },
+        "languages": {
+            "header": "Языки",
+            "items": [
+                {"name": "Русский", "level": "Родной"},
+                {"name": "Английский", "level": "B2 — Средне-продвинутый"}
+            ]
+        }
     },
     "en": {
-        "title": [
-            "Aleksandr Raetskiy - Web developer"
-        ],
-        "name": [
-            "Aleksandr Raetskiy"
-        ],
-        "about_header": [
-            "About me"
-        ],
-        "about_text": [
-            "I was born on 29 February of 1992 in the city of Novokuznetsk. I am a backend developer (mostly with PHP).",
-            "Also I work with frontend scripts. Don't like to work with layout."
-        ],
-        "experience_header": [
-            "Experience"
-        ],
-        "experience_text": [
-            "I am an administrator and developer of learning management system <a href=\"https://moodle.org\">Moodle</a>",
-            "of Siberian State Industrial University (<a href=\"http://sibsiu.ru\">SibSIU</a>) since 2015.",
-            "One of my plugins has interested other universities and was successfully sold.",
-            "Also I took part in developing the site of SibSIU history museum."
-        ],
-        "projects_header": [
-            "Projects portfolio"
-        ],
-        "projects_list": [
-            {
-                "name": [
-                    "<a href=\"http://e-notabene.ru/kp/article_18016.html\">Information system «Portfolio SibSIU»</a> (PHP, jQuery, Twig)"
-                ],
-                "description": [
-                    "A «block» type plugin for the system Moodle. It allows students to form electronic portfolio in accordance with Russian education standards"
-                ]
+        "title": "Aleksandr Raetskiy — Senior Backend Developer",
+        "personal": {
+            "name": "Aleksandr Raetskiy",
+            "position": "Senior Backend Developer",
+            "location": "Novokuznetsk, Russia"
+        },
+        "contacts": {
+            "phone": "+7 (951) 175-19-99",
+            "email": "ksenon3@mail.ru",
+            "github": "asylum29",
+            "telegram": "worldzeron"
+        },
+        "about": {
+            "header": "About Me",
+            "text": [
+                "Backend developer with over 10 years of experience. Specializing in PHP (Laravel, Symfony), also working with Go and C#.",
+                "Leading development teams, mentoring, and system analysis. Actively integrating AI tools into development processes."
+            ]
+        },
+        "ai": {
+            "header": "AI Competencies",
+            "tools": "GLM-5, OPUS 4.6",
+            "description": [
+                "Actively using AI in work — completely changing the approach to software development.",
+                "Managing AI team, forming approaches to creating \"A-teams\".",
+                "Implementing AI tools in the company for various software development and support requests."
+            ]
+        },
+        "experience": {
+            "header": "Experience",
+            "items": [
+                {
+                    "company": "Krastsvetmet IT",
+                    "url": "https://kit-digital.ru",
+                    "position": "Senior Developer",
+                    "period": "October 2022 — Present",
+                    "duration": "3 years 5 months",
+                    "description": [
+                        "Creating \"Goal Setting / Development Committees\" project (Laravel). MVP development, architecture design.",
+                        "Managing backend development team. Task decomposition, mentoring.",
+                        "Developing \"Wholesale Jewelry Portal\": catalog redesign, notification system, marketing tools.",
+                        "Developing production optimization scheduler in C#."
+                    ]
+                },
+                {
+                    "company": "Krastsvetmet",
+                    "url": "https://krastsvetmet.ru",
+                    "position": "Developer",
+                    "period": "May 2022 — October 2022",
+                    "duration": "6 months",
+                    "description": [
+                        "Product backend development of jewelry portal for B2B segment using Laravel."
+                    ]
+                },
+                {
+                    "company": "CENTRA",
+                    "url": "https://mycentra.ru",
+                    "position": "Programmer 1st Category",
+                    "period": "May 2019 — April 2022",
+                    "duration": "3 years",
+                    "description": [
+                        "Development and implementation of ERP system on Symfony4: call center, contract management, reporting, integrations.",
+                        "Creating services in Go for integration with RosDomofon.",
+                        "Supporting systems on Bitrix, Yii2, Vue.js, Java."
+                    ]
+                },
+                {
+                    "company": "Siberian State Industrial University",
+                    "url": "https://sibsiu.ru",
+                    "position": "Sector Head",
+                    "period": "September 2017 — November 2018",
+                    "duration": "1 year 3 months",
+                    "description": [
+                        "Administration and development of Moodle learning management system.",
+                        "Developing plugins successfully sold to other educational organizations."
+                    ]
+                },
+                {
+                    "company": "Siberian State Industrial University",
+                    "url": "https://sibsiu.ru",
+                    "position": "Lead Software Engineer",
+                    "period": "September 2015 — September 2017",
+                    "duration": "2 years 1 month",
+                    "description": [
+                        "Administration and user support of Moodle system.",
+                        "Developing functionality according to university requirements."
+                    ]
+                }
+            ]
+        },
+        "skills": {
+            "header": "Skills",
+            "technical": {
+                "header": "Technical",
+                "items": ["PHP", "Laravel", "Symfony", "Go", "C#", "JavaScript", "SQL", "Docker", "Redis", "RabbitMQ"]
             },
-            {
-                "name": [
-                    "<a href=\"https://github.com/asylum29/block_sibcms\">Electronic courses monitoring system</a> (PHP, jQuery)"
-                ],
-                "description": [
-                    "A «block» type plugin for the system Moodle. It allows forming reports about electronic courses: courses content errors, activity statistic.",
-                    "This projects is based on two other plugins: <a href=\"https://github.com/asylum29/report_monitoring\">«Course monitoring»</a>",
-                    "and <a href=\"https://github.com/asylum29/report_activity\">«Course activity»</a>"
-                ]
+            "architecture": {
+                "header": "Architecture",
+                "items": ["REST", "SOAP", "SOLID", "KISS", "DRY", "MVC"]
             },
-            {
-                "name": [
-                    "<a href=\"https://github.com/asylum29/block_course_manager\">Block «Course management»</a> (PHP)"
-                ],
-                "description": [
-                    "A «block» type plugin for the system Moodle. It allows grouping electronic courses in custom categories"
-                ]
-            },
-            {
-                "name": [
-                    "<a href=\"https://github.com/asylum29/assignfeedback_doc\">Module «Document report»</a> (PHP)"
-                ],
-                "description": [
-                    "Assign feedback module for the system Moodle. It creates teacher’s reports for student works, automatically filling document form fields"
-                ]
-            },
-            {
-                "name": [
-                    "<a href=\"https://github.com/asylum29/local_group_messages\">Module «Group message sending»</a> (PHP)"
-                ],
-                "description": [
-                    "Group message sending module for Moodle system. Allows to send messages to user groups"
-                ]
-            },
-            {
-                "name": [
-                    "<a href=\"https://github.com/asylum29/MuseumProject\">Web-site «Museum of the history of SibSIU»</a> (SQLite, PHP, jQuery, Twig)"
-                ],
-                "description": [
-                    "<a href=\"http://dep.sibsiu.ru/museum\">Web site of SIbSIU history museum</a>,",
-                    "presenting users various information about museum exhibits, university leaders, etc"
-                ]
+            "soft": {
+                "header": "Management",
+                "items": ["Team Management", "Mentoring", "System Analysis", "Task Decomposition", "Kanban", "Scrum"]
             }
-        ],
-        "extra_header": [
-            "Other"
-        ],
-        "extra_text": [
-            "I can work with GIT, know MVC, REST, CORS, JSONP and much more.<br />",
-            "Like quiet and silence."
-        ]
+        },
+        "education": {
+            "header": "Education",
+            "degree": "Master's Degree",
+            "university": "Siberian State Industrial University",
+            "faculty": "Institute of Information Technologies and Automated Systems",
+            "specialty": "Information Systems and Technologies",
+            "year": "2018"
+        },
+        "languages": {
+            "header": "Languages",
+            "items": [
+                {"name": "Russian", "level": "Native"},
+                {"name": "English", "level": "B2 — Upper-Intermediate"}
+            ]
+        }
     }
 }

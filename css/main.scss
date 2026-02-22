@@ -1,7 +1,7 @@
 ---
-# Main scss file
 ---
 
-@import 
-    'main',
-    'content';
+@import 'variables';
+@import 'base';
+@import 'components';
+@import 'animations';
