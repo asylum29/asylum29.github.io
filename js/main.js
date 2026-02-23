@@ -224,6 +224,8 @@
     // ============================================
     // Scroll Animations
     // ============================================
+    
+    let scrollObserver = null;
 
     function initScrollAnimations() {
         // Define animation types for different elements
@@ -255,19 +257,17 @@
             threshold: 0.1
         };
 
-        const observer = new IntersectionObserver((entries) => {
+        scrollObserver = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     entry.target.classList.add('animated');
-                    // Optionally unobserve after animation
-                    // observer.unobserve(entry.target);
                 }
             });
         }, observerOptions);
 
         // Observe all animated elements
         document.querySelectorAll('.scroll-animate--fade-up, .scroll-animate--fade-left, .scroll-animate--fade-right, .scroll-animate--scale, .scroll-animate--blur, .scroll-animate--bounce, .scroll-animate--flip').forEach(el => {
-            observer.observe(el);
+            scrollObserver.observe(el);
         });
 
         // Staggered animation for skill tags
@@ -280,10 +280,43 @@
 
     }
 
+    // Reset scroll animations (remove animated class and re-apply animation classes)
+    function resetScrollAnimations() {
+        // Disconnect existing observer
+        if (scrollObserver) {
+            scrollObserver.disconnect();
+            scrollObserver = null;
+        }
+        
+        // Remove all animation classes
+        const animatedElements = document.querySelectorAll('.animated');
+        animatedElements.forEach(el => el.classList.remove('animated'));
+        
+        // Remove scroll animation classes
+        const scrollAnimationClasses = [
+            'scroll-animate--fade-up',
+            'scroll-animate--fade-left',
+            'scroll-animate--fade-right',
+            'scroll-animate--scale',
+            'scroll-animate--blur',
+            'scroll-animate--bounce',
+            'scroll-animate--flip'
+        ];
+        
+        scrollAnimationClasses.forEach(cls => {
+            document.querySelectorAll(`.${cls}`).forEach(el => {
+                el.classList.remove(cls);
+                el.style.transitionDelay = '';
+            });
+        });
+    }
+
     // Initialize scroll animations after render
     const originalRenderPage = renderPage;
     renderPage = function() {
         originalRenderPage();
+        // Reset and reinitialize scroll animations
+        resetScrollAnimations();
         // Small delay to ensure DOM is ready
         setTimeout(initScrollAnimations, 100);
     };
