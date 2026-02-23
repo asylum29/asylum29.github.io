@@ -357,6 +357,9 @@
         // Toggle lightbox on avatar click
         function toggleLightbox() {
             const rect = avatarImg.getBoundingClientRect();
+            // Calculate absolute position relative to document
+            const absoluteLeft = rect.left + window.scrollX;
+            const absoluteTop = rect.top + window.scrollY;
 
             if (!isOpen) {
                 // Hide original avatar
@@ -365,8 +368,8 @@
                 // Set initial position and size (same as avatar)
                 lightboxImg.style.width = `${rect.width}px`;
                 lightboxImg.style.height = `${rect.height}px`;
-                lightboxImg.style.left = `${rect.left}px`;
-                lightboxImg.style.top = `${rect.top}px`;
+                lightboxImg.style.left = `${absoluteLeft}px`;
+                lightboxImg.style.top = `${absoluteTop}px`;
                 lightboxImg.style.transition = 'none';
                 lightboxImg.style.transform = 'scale(1)';
 
