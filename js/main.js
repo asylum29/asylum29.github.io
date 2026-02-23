@@ -122,11 +122,13 @@
         // Update HTML content elements
         document.querySelectorAll('[data-i18n-html]').forEach(el => {
             const key = el.dataset.i18nHtml;
-            const value = getNestedValue(data, key);
+            let value = getNestedValue(data, key);
             if (value !== undefined) {
                 if (Array.isArray(value)) {
                     el.innerHTML = value.map(p => `<p>${p}</p>`).join('');
-                } else {
+                } else if (typeof value === 'string') {
+                    // Replace {year} placeholder with current year
+                    value = value.replace('{year}', new Date().getFullYear());
                     el.innerHTML = value;
                 }
             }

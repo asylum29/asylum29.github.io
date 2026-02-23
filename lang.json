@@ -119,6 +119,9 @@
                 {"name": "Русский", "level": "Родной"},
                 {"name": "Английский", "level": "B2 — Средне-продвинутый"}
             ]
+        },
+        "footer": {
+            "copyright": "© {year} Александр Раецкий"
         }
     },
     "en": {
@@ -241,6 +244,9 @@
                 {"name": "Russian", "level": "Native"},
                 {"name": "English", "level": "B2 — Upper-Intermediate"}
             ]
+        },
+        "footer": {
+            "copyright": "© {year} Aleksandr Raetskiy"
         }
     }
 }
