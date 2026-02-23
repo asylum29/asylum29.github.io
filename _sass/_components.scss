@@ -38,10 +38,10 @@
     height: 100px;
     border-radius: 50%;
     object-fit: cover;
-    border: 2px solid $color-border;
+    border: 2px solid var(--color-border);
     box-shadow:
         0 2px 8px rgba(0, 0, 0, 0.08),
-        inset 0 0 0 3px $color-surface;
+        inset 0 0 0 3px var(--color-surface);
     cursor: pointer;
     transition: transform $transition-base, box-shadow $transition-base;
     
@@ -49,7 +49,7 @@
         transform: scale(1.05);
         box-shadow:
             0 4px 16px rgba(0, 0, 0, 0.12),
-            inset 0 0 0 3px $color-surface;
+            inset 0 0 0 3px var(--color-surface);
     }
     
     @media (max-width: $breakpoint-sm) {
@@ -66,14 +66,14 @@
 .header__name {
     font-size: $font-size-4xl;
     font-weight: $font-weight-bold;
-    color: $color-text;
+    color: var(--color-text);
     margin-bottom: $spacing-2;
     letter-spacing: -0.025em;
 }
 
 .header__position {
     font-size: $font-size-xl;
-    color: $color-text-secondary;
+    color: var(--color-text-secondary);
     font-weight: $font-weight-medium;
 }
 
@@ -89,26 +89,26 @@
     padding: $spacing-2 $spacing-3;
     font-size: $font-size-sm;
     font-weight: $font-weight-medium;
-    color: $color-text-secondary;
-    background: $color-surface;
-    border: 1px solid $color-border;
+    color: var(--color-text-secondary);
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
     border-radius: $radius-base;
     cursor: pointer;
     transition: all $transition-fast;
     
     &:hover {
-        border-color: $color-primary;
-        color: $color-primary;
+        border-color: var(--color-primary);
+        color: var(--color-primary);
     }
     
     &.active {
-        background: $color-primary;
-        border-color: $color-primary;
+        background: var(--color-primary);
+        border-color: var(--color-primary);
         color: white;
     }
     
     &:focus-visible {
-        outline: 2px solid $color-primary;
+        outline: 2px solid var(--color-primary);
         outline-offset: 2px;
     }
 }
@@ -122,22 +122,22 @@
     gap: $spacing-4;
     margin-bottom: $spacing-8;
     padding-bottom: $spacing-6;
-    border-bottom: 1px solid $color-border;
+    border-bottom: 1px solid var(--color-border);
 }
 
 .contact-item {
     display: flex;
     align-items: center;
     gap: $spacing-2;
-    color: $color-text-secondary;
+    color: var(--color-text-secondary);
     font-size: $font-size-sm;
     transition: color $transition-fast;
     
     &:hover {
-        color: $color-primary;
+        color: var(--color-primary);
         
         .contact-item__icon {
-            color: $color-primary;
+            color: var(--color-primary);
         }
     }
     
@@ -153,7 +153,7 @@
 .contact-item__icon {
     width: 18px;
     height: 18px;
-    color: $color-text-tertiary;
+    color: var(--color-text-tertiary);
     transition: color $transition-fast;
 }
 
@@ -174,21 +174,21 @@
 .section__title {
     font-size: $font-size-2xl;
     font-weight: $font-weight-semibold;
-    color: $color-text;
+    color: var(--color-text);
     margin: 0;
 }
 
 .section__icon {
     width: 24px;
     height: 24px;
-    color: $color-primary;
+    color: var(--color-primary);
 }
 
 // About Section
 // -------------
 
 .about__text {
-    color: $color-text-secondary;
+    color: var(--color-text-secondary);
     font-size: $font-size-lg;
     line-height: $line-height-relaxed;
     
@@ -201,18 +201,18 @@
 // ---------------------------
 
 .section--ai {
-    background: linear-gradient(135deg, $color-ai-light 0%, $color-surface 100%);
+    background: linear-gradient(135deg, var(--color-ai-light) 0%, var(--color-surface) 100%);
     padding: $spacing-6;
     border-radius: $radius-lg;
-    border-left: 4px solid $color-ai;
+    border-left: 4px solid var(--color-ai);
 }
 
 .section--ai .section__title {
-    color: $color-ai;
+    color: var(--color-ai);
 }
 
 .section--ai .section__icon {
-    color: $color-ai;
+    color: var(--color-ai);
 }
 
 .ai__tools {
@@ -225,16 +225,16 @@
     display: inline-flex;
     align-items: center;
     padding: $spacing-1 $spacing-3;
-    background: $color-surface;
-    border: 1px solid $color-ai;
+    background: var(--color-surface);
+    border: 1px solid var(--color-ai);
     border-radius: $radius-full;
     font-size: $font-size-sm;
     font-weight: $font-weight-medium;
-    color: $color-ai;
+    color: var(--color-ai);
 }
 
 .ai__description {
-    color: $color-text-secondary;
+    color: var(--color-text-secondary);
     line-height: $line-height-relaxed;
     
     li {
@@ -262,10 +262,10 @@
         top: 8px;
         width: 12px;
         height: 12px;
-        background: $color-primary;
+        background: var(--color-primary);
         border-radius: 50%;
-        border: 3px solid $color-bg;
-        box-shadow: 0 0 0 2px $color-primary;
+        border: 3px solid var(--color-bg);
+        box-shadow: 0 0 0 2px var(--color-primary);
     }
     
     &::after {
@@ -275,7 +275,7 @@
         top: 24px;
         bottom: -#{$spacing-6};
         width: 2px;
-        background: $color-border;
+        background: var(--color-border);
     }
     
     &:last-child::after {
@@ -290,13 +290,13 @@
 .experience-card__company {
     font-size: $font-size-lg;
     font-weight: $font-weight-semibold;
-    color: $color-text;
+    color: var(--color-text);
     
     a {
         color: inherit;
         
         &:hover {
-            color: $color-primary;
+            color: var(--color-primary);
         }
     }
 }
@@ -304,13 +304,13 @@
 .experience-card__period {
     display: block;
     font-size: $font-size-sm;
-    color: $color-text-tertiary;
+    color: var(--color-text-tertiary);
     margin-top: $spacing-1;
 }
 
 .experience-card__position {
     font-size: $font-size-base;
-    color: $color-primary;
+    color: var(--color-primary);
     font-weight: $font-weight-medium;
     margin-bottom: $spacing-3;
 }
@@ -323,7 +323,7 @@
         position: relative;
         padding-left: $spacing-4;
         margin-bottom: $spacing-2;
-        color: $color-text-secondary;
+        color: var(--color-text-secondary);
         font-size: $font-size-sm;
         line-height: $line-height-relaxed;
         
@@ -334,7 +334,7 @@
             top: 10px;
             width: 6px;
             height: 6px;
-            background: $color-border;
+            background: var(--color-border);
             border-radius: 50%;
         }
     }
@@ -352,7 +352,7 @@
 .skill-group__title {
     font-size: $font-size-sm;
     font-weight: $font-weight-semibold;
-    color: $color-text-tertiary;
+    color: var(--color-text-tertiary);
     text-transform: uppercase;
     letter-spacing: 0.05em;
     margin-bottom: $spacing-3;
@@ -367,16 +367,16 @@
 .skill-tag {
     display: inline-flex;
     padding: $spacing-1 $spacing-3;
-    background: $color-surface;
-    border: 1px solid $color-border;
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
     border-radius: $radius-full;
     font-size: $font-size-sm;
-    color: $color-text;
+    color: var(--color-text);
     transition: all $transition-fast;
     
     &:hover {
-        border-color: $color-primary;
-        color: $color-primary;
+        border-color: var(--color-primary);
+        color: var(--color-primary);
         transform: translateY(-1px);
     }
 }
@@ -397,8 +397,8 @@
     justify-content: center;
     width: 56px;
     height: 56px;
-    background: $color-primary-lighter;
-    color: $color-primary;
+    background: var(--color-primary-lighter);
+    color: var(--color-primary);
     font-size: $font-size-sm;
     font-weight: $font-weight-semibold;
     border-radius: $radius-lg;
@@ -411,18 +411,18 @@
 .education-card__degree {
     font-size: $font-size-lg;
     font-weight: $font-weight-semibold;
-    color: $color-text;
+    color: var(--color-text);
     margin-bottom: $spacing-1;
 }
 
 .education-card__university {
-    color: $color-text-secondary;
+    color: var(--color-text-secondary);
     margin-bottom: $spacing-1;
 }
 
 .education-card__faculty {
     font-size: $font-size-sm;
-    color: $color-text-tertiary;
+    color: var(--color-text-tertiary);
 }
 
 // Languages
@@ -442,12 +442,12 @@
 
 .language-item__name {
     font-weight: $font-weight-medium;
-    color: $color-text;
+    color: var(--color-text);
 }
 
 .language-item__level {
     font-size: $font-size-sm;
-    color: $color-text-tertiary;
+    color: var(--color-text-tertiary);
 }
 
 // Footer
@@ -456,9 +456,9 @@
 .footer {
     margin-top: $spacing-12;
     padding-top: $spacing-6;
-    border-top: 1px solid $color-border;
+    border-top: 1px solid var(--color-border);
     text-align: center;
-    color: $color-text-tertiary;
+    color: var(--color-text-tertiary);
     font-size: $font-size-sm;
 }
 
@@ -529,10 +529,10 @@
         position: absolute;
         border-radius: 50%;
         object-fit: cover;
-        border: 2px solid $color-border;
+        border: 2px solid var(--color-border);
         box-shadow:
             0 4px 16px rgba(0, 0, 0, 0.15),
-            inset 0 0 0 3px $color-surface;
+            inset 0 0 0 3px var(--color-surface);
         will-change: transform;
         cursor: pointer;
         transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
