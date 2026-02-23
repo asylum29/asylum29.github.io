@@ -21,10 +21,10 @@
         },
         "ai": {
             "header": "ИИ-компетенции",
-            "tools": "GLM-5, OPUS 4.6",
+            "tools": "GLM-5, Opus 4.6",
             "description": [
                 "Активно использую ИИ в работе — полностью меняю подход к созданию ПО.",
-                "Управляю ИИ-командой, формирую подходы к созданию «А-команды».",
+                "Управляю ИИ-командой, формирую подходы к созданию «А-команды» — команды, которая решает любые ИТ-задачи бизнеса.",
                 "Внедряю ИИ-инструменты в компании для обслуживания различных запросов на создание и поддержку ПО."
             ]
         },
@@ -32,7 +32,7 @@
             "header": "Опыт работы",
             "items": [
                 {
-                    "company": "Красцветмет ИТ",
+                    "company": "Красцветмет. ИТ",
                     "url": "https://kit-digital.ru",
                     "position": "Старший разработчик",
                     "period": "Октябрь 2022 — настоящее время",
@@ -98,7 +98,7 @@
             },
             "architecture": {
                 "header": "Архитектура",
-                "items": ["REST", "SOAP", "SOLID", "KISS", "DRY", "MVC"]
+                "items": ["REST", "SOAP", "SOLID", "KISS", "DRY", "MVC", "DDD"]
             },
             "soft": {
                 "header": "Управление",
@@ -143,10 +143,10 @@
         },
         "ai": {
             "header": "AI Competencies",
-            "tools": "GLM-5, OPUS 4.6",
+            "tools": "GLM-5, Opus 4.6",
             "description": [
                 "Actively using AI in work — completely changing the approach to software development.",
-                "Managing AI team, forming approaches to creating \"A-teams\".",
+                "Managing AI team, forming approaches to creating \"A-teams\" — a team that solves any business IT tasks.",
                 "Implementing AI tools in the company for various software development and support requests."
             ]
         },
@@ -154,7 +154,7 @@
             "header": "Experience",
             "items": [
                 {
-                    "company": "Krastsvetmet IT",
+                    "company": "Krastsvetmet. IT",
                     "url": "https://kit-digital.ru",
                     "position": "Senior Developer",
                     "period": "October 2022 — Present",
@@ -220,7 +220,7 @@
             },
             "architecture": {
                 "header": "Architecture",
-                "items": ["REST", "SOAP", "SOLID", "KISS", "DRY", "MVC"]
+                "items": ["REST", "SOAP", "SOLID", "KISS", "DRY", "MVC", "DDD"]
             },
             "soft": {
                 "header": "Management",

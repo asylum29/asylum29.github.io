@@ -29,6 +29,24 @@
     gap: $spacing-4;
 }
 
+.header__avatar {
+    flex-shrink: 0;
+}
+
+.header__avatar-img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid $color-primary;
+    box-shadow: 0 4px 12px rgba($color-primary, 0.2);
+    
+    @media (max-width: $breakpoint-sm) {
+        width: 80px;
+        height: 80px;
+    }
+}
+
 .header__info {
     flex: 1;
     min-width: 200px;
@@ -133,16 +151,6 @@
 
 .section {
     margin-bottom: $spacing-10;
-    opacity: 0;
-    transform: translateY(20px);
-    animation: fadeInUp 0.6s ease forwards;
-    
-    &:nth-child(1) { animation-delay: 0.1s; }
-    &:nth-child(2) { animation-delay: 0.2s; }
-    &:nth-child(3) { animation-delay: 0.3s; }
-    &:nth-child(4) { animation-delay: 0.4s; }
-    &:nth-child(5) { animation-delay: 0.5s; }
-    &:nth-child(6) { animation-delay: 0.6s; }
 }
 
 .section__header {

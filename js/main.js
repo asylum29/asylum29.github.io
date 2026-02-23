@@ -221,4 +221,71 @@
         </svg>`;
     }
 
+    // ============================================
+    // Scroll Animations
+    // ============================================
+
+    function initScrollAnimations() {
+        // Define animation types for different elements
+        const animationConfig = [
+            { selector: '.header', animation: 'scroll-animate--fade-up' },
+            { selector: '.contacts', animation: 'scroll-animate--fade-left' },
+            { selector: '.section:nth-child(odd)', animation: 'scroll-animate--fade-left' },
+            { selector: '.section:nth-child(even)', animation: 'scroll-animate--fade-right' },
+            { selector: '.experience-card', animation: 'scroll-animate--fade-up' },
+            { selector: '.skill-group', animation: 'scroll-animate--scale' },
+            { selector: '.skill-tag', animation: 'scroll-animate--bounce' },
+            { selector: '.education-card', animation: 'scroll-animate--blur' },
+            { selector: '.language-item', animation: 'scroll-animate--fade-right' },
+            { selector: '.footer', animation: 'scroll-animate--fade-up' }
+        ];
+
+        // Apply animation classes to elements
+        animationConfig.forEach(config => {
+            document.querySelectorAll(config.selector).forEach((el, index) => {
+                el.classList.add(config.animation);
+                el.style.transitionDelay = `${index * 0.1}s`;
+            });
+        });
+
+        // Create Intersection Observer
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px 0px -50px 0px',
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animated');
+                    // Optionally unobserve after animation
+                    // observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        // Observe all animated elements
+        document.querySelectorAll('.scroll-animate--fade-up, .scroll-animate--fade-left, .scroll-animate--fade-right, .scroll-animate--scale, .scroll-animate--blur, .scroll-animate--bounce, .scroll-animate--flip').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Staggered animation for skill tags
+        document.querySelectorAll('.skill-tags').forEach(container => {
+            const tags = container.querySelectorAll('.skill-tag');
+            tags.forEach((tag, index) => {
+                tag.style.transitionDelay = `${index * 0.05}s`;
+            });
+        });
+
+    }
+
+    // Initialize scroll animations after render
+    const originalRenderPage = renderPage;
+    renderPage = function() {
+        originalRenderPage();
+        // Small delay to ensure DOM is ready
+        setTimeout(initScrollAnimations, 100);
+    };
+
 })();
