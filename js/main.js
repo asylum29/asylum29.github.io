@@ -58,8 +58,16 @@
             if (elements.container) {
                 elements.container.style.opacity = '1';
             }
+
+            // Initialize avatar lightbox
+            initAvatarLightbox();
         } catch (error) {
             console.error('Error initializing page:', error);
+            // Show container and display error message
+            if (elements.container) {
+                elements.container.style.opacity = '1';
+                elements.container.innerHTML = '<p style="text-align:center;color:var(--color-text-secondary);padding:2rem">Не удалось загрузить данные. Попробуйте обновить страницу.</p>';
+            }
         }
     }
 
@@ -95,6 +103,9 @@
     function renderPage() {
         const data = langData[currentLang];
         if (!data) return;
+
+        // Update document language
+        document.documentElement.lang = currentLang;
 
         // Update title
         document.title = data.title;
@@ -134,6 +145,10 @@
         renderExperience(data.experience);
         renderSkills(data.skills);
         renderLanguages(data.languages);
+
+        // Reset and reinitialize scroll animations
+        resetScrollAnimations();
+        setTimeout(initScrollAnimations, 100);
     }
 
     function renderExperience(experience) {
@@ -143,7 +158,7 @@
             <article class="experience-card">
                 <header class="experience-card__header">
                     <h3 class="experience-card__company">
-                        ${item.url ? `<a href="${item.url}" target="_blank" rel="noopener">${item.company}</a>` : item.company}
+                        ${item.url && isSafeUrl(item.url) ? `<a href="${item.url}" target="_blank" rel="noopener">${item.company}</a>` : item.company}
                     </h3>
                     <span class="experience-card__period">${item.period}</span>
                 </header>
@@ -195,6 +210,15 @@
 
     function getNestedValue(obj, path) {
         return path.split('.').reduce((acc, part) => acc && acc[part], obj);
+    }
+
+    function isSafeUrl(url) {
+        try {
+            const parsed = new URL(url);
+            return parsed.protocol === 'http:' || parsed.protocol === 'https:';
+        } catch {
+            return false;
+        }
     }
 
     function getTechIcon() {
@@ -311,16 +335,6 @@
         });
     }
 
-    // Initialize scroll animations after render
-    const originalRenderPage = renderPage;
-    renderPage = function() {
-        originalRenderPage();
-        // Reset and reinitialize scroll animations
-        resetScrollAnimations();
-        // Small delay to ensure DOM is ready
-        setTimeout(initScrollAnimations, 100);
-    };
-
     // ============================================
     // Avatar Lightbox
     // ============================================
@@ -330,6 +344,7 @@
         if (!avatarImg) return;
 
         let isOpen = false;
+        const scale = 3;
 
         // Create lightbox element
         const lightbox = document.createElement('div');
@@ -342,48 +357,43 @@
         // Toggle lightbox on avatar click
         function toggleLightbox() {
             const rect = avatarImg.getBoundingClientRect();
-            const scale = 3;
-            
-            // Calculate absolute position relative to document
-            const absoluteLeft = rect.left + window.scrollX;
-            const absoluteTop = rect.top + window.scrollY;
-            
+
             if (!isOpen) {
                 // Hide original avatar
                 avatarImg.style.opacity = '0';
-                
+
                 // Set initial position and size (same as avatar)
                 lightboxImg.style.width = `${rect.width}px`;
                 lightboxImg.style.height = `${rect.height}px`;
-                lightboxImg.style.left = `${absoluteLeft}px`;
-                lightboxImg.style.top = `${absoluteTop}px`;
+                lightboxImg.style.left = `${rect.left}px`;
+                lightboxImg.style.top = `${rect.top}px`;
                 lightboxImg.style.transition = 'none';
                 lightboxImg.style.transform = 'scale(1)';
-                
+
                 // Force reflow
                 lightboxImg.offsetHeight;
-                
+
                 // Show lightbox
                 lightbox.classList.add('active');
-                
+
                 // Animate scale up
                 requestAnimationFrame(() => {
                     lightboxImg.style.transition = 'transform 0.3s cubic-bezier(0.4, 0, 0.2, 1)';
                     lightboxImg.style.transform = `scale(${scale})`;
                 });
-                
+
                 isOpen = true;
             } else {
                 // Animate scale down
                 lightboxImg.style.transition = 'transform 0.3s cubic-bezier(0.4, 0, 0.2, 1)';
                 lightboxImg.style.transform = 'scale(1)';
-                
+
                 // Hide after animation and show original avatar
                 setTimeout(() => {
                     lightbox.classList.remove('active');
                     avatarImg.style.opacity = '';
                 }, 300);
-                
+
                 isOpen = false;
             }
         }
@@ -424,13 +434,10 @@
                 // Re-apply transform after position update
                 requestAnimationFrame(() => {
                     lightboxImg.style.transition = 'transform 0.3s cubic-bezier(0.4, 0, 0.2, 1)';
-                    lightboxImg.style.transform = 'scale(2)';
+                    lightboxImg.style.transform = `scale(${scale})`;
                 });
             }
         });
     }
-
-    // Initialize avatar lightbox on DOM ready
-    document.addEventListener('DOMContentLoaded', initAvatarLightbox);
 
 })();
