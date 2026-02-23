@@ -42,6 +42,15 @@
     box-shadow:
         0 2px 8px rgba(0, 0, 0, 0.08),
         inset 0 0 0 3px $color-surface;
+    cursor: pointer;
+    transition: transform $transition-base, box-shadow $transition-base;
+    
+    &:hover {
+        transform: scale(1.05);
+        box-shadow:
+            0 4px 16px rgba(0, 0, 0, 0.12),
+            inset 0 0 0 3px $color-surface;
+    }
     
     @media (max-width: $breakpoint-sm) {
         width: 80px;
@@ -497,5 +506,37 @@
     
     .section__title {
         font-size: $font-size-xl;
+    }
+}
+
+// Avatar Lightbox
+// ---------------
+
+.avatar-lightbox {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    visibility: hidden;
+    pointer-events: none;
+    
+    &.active {
+        visibility: visible;
+    }
+    
+    &__image {
+        position: absolute;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 2px solid $color-border;
+        box-shadow:
+            0 4px 16px rgba(0, 0, 0, 0.15),
+            inset 0 0 0 3px $color-surface;
+        will-change: transform;
+        cursor: pointer;
+        transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        transform-origin: top left;
+        pointer-events: auto;
     }
 }

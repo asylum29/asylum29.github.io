@@ -288,4 +288,116 @@
         setTimeout(initScrollAnimations, 100);
     };
 
+    // ============================================
+    // Avatar Lightbox
+    // ============================================
+
+    function initAvatarLightbox() {
+        const avatarImg = document.querySelector('.header__avatar-img');
+        if (!avatarImg) return;
+
+        let isOpen = false;
+
+        // Create lightbox element
+        const lightbox = document.createElement('div');
+        lightbox.className = 'avatar-lightbox';
+        lightbox.innerHTML = `<img src="${avatarImg.src}" alt="${avatarImg.alt}" class="avatar-lightbox__image">`;
+        document.body.appendChild(lightbox);
+
+        const lightboxImg = lightbox.querySelector('.avatar-lightbox__image');
+
+        // Toggle lightbox on avatar click
+        function toggleLightbox() {
+            const rect = avatarImg.getBoundingClientRect();
+            const scale = 3;
+            
+            // Calculate absolute position relative to document
+            const absoluteLeft = rect.left + window.scrollX;
+            const absoluteTop = rect.top + window.scrollY;
+            
+            if (!isOpen) {
+                // Hide original avatar
+                avatarImg.style.opacity = '0';
+                
+                // Set initial position and size (same as avatar)
+                lightboxImg.style.width = `${rect.width}px`;
+                lightboxImg.style.height = `${rect.height}px`;
+                lightboxImg.style.left = `${absoluteLeft}px`;
+                lightboxImg.style.top = `${absoluteTop}px`;
+                lightboxImg.style.transition = 'none';
+                lightboxImg.style.transform = 'scale(1)';
+                
+                // Force reflow
+                lightboxImg.offsetHeight;
+                
+                // Show lightbox
+                lightbox.classList.add('active');
+                
+                // Animate scale up
+                requestAnimationFrame(() => {
+                    lightboxImg.style.transition = 'transform 0.3s cubic-bezier(0.4, 0, 0.2, 1)';
+                    lightboxImg.style.transform = `scale(${scale})`;
+                });
+                
+                isOpen = true;
+            } else {
+                // Animate scale down
+                lightboxImg.style.transition = 'transform 0.3s cubic-bezier(0.4, 0, 0.2, 1)';
+                lightboxImg.style.transform = 'scale(1)';
+                
+                // Hide after animation and show original avatar
+                setTimeout(() => {
+                    lightbox.classList.remove('active');
+                    avatarImg.style.opacity = '';
+                }, 300);
+                
+                isOpen = false;
+            }
+        }
+
+        // Toggle on avatar click
+        avatarImg.addEventListener('click', toggleLightbox);
+
+        // Close on click anywhere when open
+        document.addEventListener('click', (e) => {
+            if (isOpen && !avatarImg.contains(e.target)) {
+                toggleLightbox();
+            }
+        });
+
+        // Close on Escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && isOpen) {
+                toggleLightbox();
+            }
+        });
+
+        // Close on scroll
+        window.addEventListener('scroll', () => {
+            if (isOpen) {
+                toggleLightbox();
+            }
+        }, { passive: true });
+
+        // Update position on window resize
+        window.addEventListener('resize', () => {
+            if (isOpen) {
+                const rect = avatarImg.getBoundingClientRect();
+                lightboxImg.style.transition = 'none';
+                lightboxImg.style.width = `${rect.width}px`;
+                lightboxImg.style.height = `${rect.height}px`;
+                lightboxImg.style.left = `${rect.left}px`;
+                lightboxImg.style.top = `${rect.top}px`;
+                // Re-apply transform after position update
+                requestAnimationFrame(() => {
+                    lightboxImg.style.transition = 'transform 0.3s cubic-bezier(0.4, 0, 0.2, 1)';
+                    lightboxImg.style.transform = 'scale(2)';
+                });
+            }
+        });
+    }
+
+    // Initialize avatar lightbox on DOM ready
+    document.addEventListener('DOMContentLoaded', initAvatarLightbox);
+
 })();
