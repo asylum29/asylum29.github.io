@@ -3,8 +3,7 @@
         "title": "Александр Раецкий — Senior Backend-разработчик",
         "personal": {
             "name": "Александр Раецкий",
-            "position": "Senior Backend-разработчик",
-            "location": "Новокузнецк, Россия"
+            "position": "Senior Backend-разработчик"
         },
         "contacts": {
             "phone": "+7 (951) 175-19-99",
@@ -21,7 +20,7 @@
         },
         "ai": {
             "header": "ИИ-компетенции",
-            "tools": "GLM-5, Opus 4.6",
+            "tools": "GLM, Opus",
             "description": [
                 "Активно использую ИИ в работе — полностью меняю подход к созданию ПО.",
                 "Управляю ИИ-командой, формирую подходы к созданию «А-команды» — команды, которая решает любые ИТ-задачи бизнеса.",
@@ -128,8 +127,7 @@
         "title": "Aleksandr Raetskiy — Senior Backend Developer",
         "personal": {
             "name": "Aleksandr Raetskiy",
-            "position": "Senior Backend Developer",
-            "location": "Novokuznetsk, Russia"
+            "position": "Senior Backend Developer"
         },
         "contacts": {
             "phone": "+7 (951) 175-19-99",
@@ -146,7 +144,7 @@
         },
         "ai": {
             "header": "AI Competencies",
-            "tools": "GLM-5, Opus 4.6",
+            "tools": "GLM, Opus",
             "description": [
                 "Actively using AI in work — completely changing the approach to software development.",
                 "Managing AI team, forming approaches to creating \"A-teams\" — a team that solves any business IT tasks.",
