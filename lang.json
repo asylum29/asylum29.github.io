@@ -14,8 +14,9 @@
         "about": {
             "header": "Обо мне",
             "text": [
-                "Backend-разработчик с более чем 10-летним опытом. Специализируюсь на PHP (Laravel, Symfony), также работаю с Go и C#.",
-                "Управляю командой разработки, занимаюсь наставничеством и системным анализом. Активно внедряю ИИ-инструменты в процессы разработки."
+                "Более 10 лет в IT. Ранее занимался backend-разработкой на PHP (Laravel, Symfony), также приходилось применять Go и C#.",
+                "В настоящее время больше времени уделяю сбору и анализу требований, проработке архитектур, управлению командой разработки и коммуникациям с заказчиком.",
+                "Для написания кода использую ИИ — это позволяет фокусироваться на задачах высокого уровня и повышать эффективность команды."
             ]
         },
         "ai": {
@@ -35,12 +36,14 @@
                     "url": "https://kit-digital.ru",
                     "position": "Старший разработчик",
                     "period": "Октябрь 2022 — настоящее время",
-                    "duration": "3 года 5 месяцев",
+                    "duration": "3 года 10 месяцев",
                     "description": [
                         "Создание проекта «Целеполагание / Комитеты развития» (Laravel). Разработка MVP, построение архитектуры.",
                         "Управление командой разработки на backend. Декомпозиция задач, наставничество.",
                         "Развитие «Оптового ювелирного портала»: переработка каталога, системы уведомлений, маркетинговые инструменты.",
-                        "Разработка оптимизирующего планировщика производства на C#."
+                        "Разработка оптимизирующего планировщика производства на C#.",
+                        "Внедрение ИИ в процессы разработки.",
+                        "Внедрение и эксплуатация проектов компании, созданных с использованием ИИ."
                     ]
                 },
                 {
@@ -101,7 +104,7 @@
             },
             "soft": {
                 "header": "Управление",
-                "items": ["Управление командой", "Наставничество", "Системный анализ", "Декомпозиция задач", "Kanban", "Scrum"]
+                "items": ["Управление командой", "Сбор и анализ требований", "Проработка архитектуры", "Наставничество", "Системный анализ", "Декомпозиция задач", "Коммуникации с заказчиком", "Kanban", "Scrum"]
             }
         },
         "education": {
@@ -138,8 +141,9 @@
         "about": {
             "header": "About Me",
             "text": [
-                "Backend developer with over 10 years of experience. Specializing in PHP (Laravel, Symfony), also working with Go and C#.",
-                "Leading development teams, mentoring, and system analysis. Actively integrating AI tools into development processes."
+                "Over 10 years in IT. Previously worked as a backend developer in PHP (Laravel, Symfony), also used Go and C#.",
+                "Currently devoting more time to gathering and analyzing requirements, architecture design, development team management, and client communication.",
+                "Using AI to write code — this allows me to focus on high-level tasks and boost the team's efficiency."
             ]
         },
         "ai": {
@@ -159,12 +163,14 @@
                     "url": "https://kit-digital.ru",
                     "position": "Senior Developer",
                     "period": "October 2022 — Present",
-                    "duration": "3 years 5 months",
+                    "duration": "3 years 10 months",
                     "description": [
                         "Creating \"Goal Setting / Development Committees\" project (Laravel). MVP development, architecture design.",
                         "Managing backend development team. Task decomposition, mentoring.",
                         "Developing \"Wholesale Jewelry Portal\": catalog redesign, notification system, marketing tools.",
-                        "Developing production optimization scheduler in C#."
+                        "Developing production optimization scheduler in C#.",
+                        "Integrating AI into development processes.",
+                        "Implementing and maintaining company projects created using AI."
                     ]
                 },
                 {
@@ -225,7 +231,7 @@
             },
             "soft": {
                 "header": "Management",
-                "items": ["Team Management", "Mentoring", "System Analysis", "Task Decomposition", "Kanban", "Scrum"]
+                "items": ["Team Management", "Requirements Gathering & Analysis", "Architecture Design", "Mentoring", "System Analysis", "Task Decomposition", "Client Communication", "Kanban", "Scrum"]
             }
         },
         "education": {

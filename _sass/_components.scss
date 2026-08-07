@@ -345,19 +345,34 @@
 // ------
 
 .skills-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    display: flex;
+    flex-direction: column;
     gap: $spacing-6;
 }
 
+.skill-group {
+    width: 100%;
+}
+
 .skill-group__title {
+    display: flex;
+    align-items: center;
+    gap: $spacing-2;
     font-size: $font-size-sm;
     font-weight: $font-weight-semibold;
     color: var(--color-text-tertiary);
     text-transform: uppercase;
     letter-spacing: 0.05em;
     margin-bottom: $spacing-3;
+
+    &::after {
+        content: '';
+        flex: 1;
+        height: 1px;
+        background: var(--color-border);
+    }
 }
+
 
 .skill-tags {
     display: flex;
@@ -488,10 +503,10 @@
         flex-direction: column;
         gap: $spacing-3;
     }
-    
-    .skills-grid {
-        grid-template-columns: 1fr;
+    .skill-tags {
+        gap: $spacing-2;
     }
+    
     
     .experience-card__header {
         flex-direction: column;
